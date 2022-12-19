@@ -1,3 +1,7 @@
+import '@types/firefox__webextensions';
+
+declare const browser: typeof browser;
+
 const form = document.querySelector('form') as HTMLFormElement;
 
 form.addEventListener('submit', (event: Event) => {
