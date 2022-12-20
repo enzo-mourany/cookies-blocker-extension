@@ -8,7 +8,9 @@
     "https://*.example.com/*"
   ],
   "background": {
-    "scripts": ["background.js"],
+    "scripts": [
+      "background.js"
+    ],
     "persistent": true
   },
   "browser_action": {
@@ -16,8 +18,12 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://*.example.com/*"],
-      "js": ["content.js"],
+      "matches": [
+        "https://*.example.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
       "run_at": "document_end"
     }
   ],
@@ -26,6 +32,9 @@
     "32": "icons/32.png",
     "48": "icons/48.png",
     "128": "icons/128.png"
+  },
+  "devDependencies": {
+    "ts-loader": "^9.4.2",
+    "webpack": "^5.75.0"
   }
 }
-
