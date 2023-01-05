@@ -1,5 +1,5 @@
 function toggleCookieBlocking(shouldBlock) {
-  chrome.storage.local.set({ blockCookies: shouldBlock });
+  browser.storage.local.set({ blockCookies: shouldBlock });
   if (shouldBlock) {
     window.addEventListener("beforeunload", blockCookies);
   } else {
