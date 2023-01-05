@@ -1,17 +1,50 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Cookie Blocker</title>
-    <style>
-      h1 { font-size: 20px;} 
-    </style>
-  </head>
-  <body>
+<head>
+  <title>Cookie Blocker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    
+    h1 {
+      color: #444;
+      font-size: 18px;
+      margin: 10px 0;
+    }
+
+    p {
+      font-size: 14px;
+      color: #666;
+      margin: 0;
+    }
+    
+    button {
+      border: none;
+      outline: none;
+      cursor: pointer;
+      font-size: 14px;
+      padding: 8px 16px;
+      border-radius: 4px;
+      background-color: #007bff;
+      color: #fff;
+      margin: 0 4px;
+    }
+    
+    button:hover {
+      background-color: #0069d9;
+    }
+    
+  </style>
+</head>
+<body>
+  <div>
     <h1>Cookie Blocker</h1>
     <p>Souhaitez-vous autoriser ou bloquer les cookies sur ce site web ?</p>
     <button id="allow-button">Autoriser</button>
     <button id="block-button">Bloquer</button>
     <script src="popup.js"></script>
-  </body>
+  </div>
+</body>
 </html>
 
