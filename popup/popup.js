@@ -1,10 +1,15 @@
 function toggleCookieBlocking(shouldBlock) {
   chrome.storage.local.set({ blockCookies: shouldBlock });
-  chrome.cookies.getAll({}, function(cookies) {
-    for (let i = 0; i < cookies.length; i++) {
-      chrome.cookies.remove({ url: "https://" + cookies[i].domain + cookies[i].path, name: cookies[i].name });
-    }
-  });
+  if (shouldBlock) {
+    window.addEventListener("beforeunload", blockCookies);
+  } else {
+    window.removeEventListener("beforeunload", blockCookies);
+  }
+}
+
+function blockCookies(event) {
+  event.preventDefault();
+  event.returnValue = "";
 }
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -17,4 +22,3 @@ document.addEventListener("DOMContentLoaded", function() {
     toggleCookieBlocking(true);
   });
 });
-
