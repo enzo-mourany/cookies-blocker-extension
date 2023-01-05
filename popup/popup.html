@@ -1,10 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <title>Cookie Blocker</title>
   <style>
     body {
       font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      border: none;
+      box-shadow: none;
     }
     
     h1 {
@@ -12,11 +19,19 @@
       font-size: 18px;
       margin: 10px 0;
     }
-
+    
     p {
       font-size: 14px;
       color: #666;
       margin: 0;
+    }
+    
+    .buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      margin: 20px 0;
     }
     
     button {
@@ -38,13 +53,13 @@
   </style>
 </head>
 <body>
-  <div>
-    <h1>Cookie Blocker</h1>
-    <p>Souhaitez-vous autoriser ou bloquer les cookies sur ce site web ?</p>
-    <button id="allow-button">Autoriser</button>
-    <button id="block-button">Bloquer</button>
-    <script src="popup.js"></script>
+  <h1>Cookie Blocker</h1>
+  <p>Do you want to allow or block cookies on this website?</p>
+  <div class="buttons">
+    <button id="allow-button">Allow</button>
+    <button id="block-button">Block</button>
   </div>
+  <script src="popup.js"></script>
 </body>
 </html>
 
